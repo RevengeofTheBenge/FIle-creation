@@ -1,7 +1,6 @@
 import time
 import os
 import hashlib
-hash_object = hashlib.md5(b'Hello World')
 
 def md5hash(s):
      hash_object = hashlib.md5(s.encode())
@@ -82,7 +81,6 @@ def depositer():
      f.truncate(0)
      add = int(input("How much would you like to deposit? "))
      imput = str(balance + add)
-     print(imput)
      f = open(filename,"w+")
      f.write(imput)
      f.close()
@@ -102,7 +100,6 @@ def remover():
      f.truncate(0)
      remove = int(input("How much would you like to remove? "))
      imput = str(balance - remove)
-     print(imput)
      f = open(filename,"w+")
      f.write(imput)
      f.close()
@@ -136,7 +133,3 @@ def start():
                break
                     
 start()
-
-
-     
-     
